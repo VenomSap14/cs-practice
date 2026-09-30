@@ -1,4 +1,4 @@
-limit = int(input())
+limit = float(input())
 n = int(input())
 amount = n
 error_amount = 0
