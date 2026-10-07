@@ -21,7 +21,4 @@ def above_average(names, scores):
     for i in range(len(names)):
         spisok.append([names[i], scores[i]])
     return [x[0] for x in spisok if x[1] > average]
-
-
-    
-
+print(ranking(['qwe','ert'],[1,1]))
