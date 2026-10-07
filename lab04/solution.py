@@ -1,5 +1,5 @@
 def winner(names, scores):
-    max = 0
+    max = float('-inf')
     for i in range(len(scores)):
         if scores[i] > max:
             max = scores[i]
@@ -7,7 +7,10 @@ def winner(names, scores):
     return names[max_i]
 
 def average(scores):
-    return sum(scores)/len(scores)
+    if len(scores) > 0:
+        return round(sum(scores)/len(scores),2)
+    else:
+        return 0
 
 def ranking(names, scores):
     spisok = []
@@ -22,5 +25,4 @@ def above_average(names, scores):
     for i in range(len(names)):
         spisok.append([names[i], scores[i]])
     return [x[0] for x in spisok if x[1] > average]
-
 
