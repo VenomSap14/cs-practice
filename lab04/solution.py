@@ -20,7 +20,7 @@ def ranking(names, scores):
     return [x[0] for x in spisok]
 
 def above_average(names, scores):
-    average = average(scores)
+    avg = average(scores)
     spisok = []
     for i in range(len(names)):
         spisok.append([names[i], scores[i]])
