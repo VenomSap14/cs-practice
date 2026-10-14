@@ -1,4 +1,6 @@
 def read_rows(lines):
+    if not lines:
+        return []
     headline = lines[0].split(',')
     spisok = []
     for line in lines[1:]:
