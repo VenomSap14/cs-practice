@@ -19,14 +19,17 @@ def count_types(rows):
     return dict
 
 def total_minutes(rows, kind):
-    sum = 0.0
+    total = 0.0
     for dict_old in rows:
-        if dict_old['тип'] == kind:
+        cleaned_dict = {str(k).strip(): str(v).strip() for k, v in dict_old.items()}
+        if cleaned_dict.get('тип') == str(kind).strip():
+            minutes_str = cleaned_dict.get('минуты', '0')
             try:
-                sum += float(dict_old['минуты'].replace(',','.'))
+                minutes_float = float(minutes_str.replace(',', '.'))
+                total += minutes_float
             except ValueError:
                 continue
-    return round(sum, 1)
+    return round(total, 1)
 
 def to_csv(counts):
     result = []
