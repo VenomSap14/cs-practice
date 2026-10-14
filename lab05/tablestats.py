@@ -22,7 +22,10 @@ def total_minutes(rows, kind):
     sum = 0.0
     for dict_old in rows:
         if dict_old['тип'] == kind:
-            sum += float(dict_old['минуты'].replace(',','.'))
+            try:
+                sum += float(dict_old['минуты'].replace(',','.'))
+            except ValueError:
+                continue
     return round(sum, 1)
 
 def to_csv(counts):
