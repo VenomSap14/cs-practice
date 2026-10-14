@@ -19,18 +19,16 @@ def count_types(rows):
     return dict
 
 def total_minutes(rows, kind):
-    sum = 0
+    sum = 0.0
     for dict_old in rows:
         if dict_old['тип'] == kind:
-            sum = list(dict_old.values())[2]
+            sum += dict_old['минуты']
     return round(sum, 1)
 
 def to_csv(counts):
-    print('тип,количество')
-    spisok = []
+    result = []
     for key in counts:
-        spisok.append(f'{key},{counts[key]}')
-    spisok.sort()
-    for x in spisok:
-        print(x)
+        result.append(f'{key},{counts[key]}')
+    result.sort()
+    return "тип,количество\n" + '\n'.join(result) + '\n'
 
