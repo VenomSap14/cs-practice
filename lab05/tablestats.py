@@ -31,6 +31,6 @@ def to_csv(counts):
         result.append(f'{key},{counts[key]}')
     result.sort()
     if not result:
-        return ''
+        return "тип,количество\n"
     return "тип,количество\n" + '\n'.join(result) + '\n'
 
