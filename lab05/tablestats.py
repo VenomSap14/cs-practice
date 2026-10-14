@@ -29,7 +29,7 @@ def to_csv(counts):
     result = []
     for key in counts:
         result.append(f'{key},{counts[key]}')
-    result.sort()
+    result.sort(key=lambda x: x.split(',')[0])
     if not result:
         return "тип,количество\n"
     return "тип,количество\n" + '\n'.join(result) + '\n'
