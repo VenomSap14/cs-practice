@@ -22,7 +22,7 @@ def total_minutes(rows, kind):
     sum = 0.0
     for dict_old in rows:
         if dict_old['тип'] == kind:
-            sum += dict_old['минуты']
+            sum += float(dict_old['минуты'])
     return round(sum, 1)
 
 def to_csv(counts):
@@ -30,5 +30,7 @@ def to_csv(counts):
     for key in counts:
         result.append(f'{key},{counts[key]}')
     result.sort()
+    if not result:
+        return ''
     return "тип,количество\n" + '\n'.join(result) + '\n'
 
