@@ -1,12 +1,12 @@
 def read_rows(lines):
     if not lines:
         return []
-    headline = lines[0].split(',')
+    headline = [x.strip() for x in lines[0].split(',')]
     spisok = []
     for line in lines[1:]:
         if not line.strip():
             continue
-        line = line.split(',')
+        line = [x.strip() for x in line.split(',')]
         if len(line) == 3:
             spisok.append({headline[0]: line[0], headline[1]:line[1], headline[2]:line[2]})
     return spisok
