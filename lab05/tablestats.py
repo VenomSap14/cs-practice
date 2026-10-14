@@ -4,7 +4,7 @@ def read_rows(lines):
     for line in lines[1:]:
         line.split(',')
         if len(line) >= 3:
-            spisok.append(dict(headline[0]=line[0], headline[1]=line[1], headline[2]=line[2]))
+            spisok.append({headline[0]: line[0], headline[1]:line[1], headline[2]:line[2]})
     return spisok
 
 def count_types(rows):
