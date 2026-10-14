@@ -14,8 +14,3 @@ def count_types(rows):
         dict[value] = dict.get(value, 0) + 1
     return dict
 
-
-with open("events.csv", "r", encoding="utf-8") as file:
-    lanes = [line.strip() for line in file] 
-    rows = read_rows(lanes)
-    print(count_types(rows))
