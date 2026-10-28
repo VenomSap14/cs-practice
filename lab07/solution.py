@@ -15,7 +15,7 @@ def block(matrix, rows, columns):
 
 def column_means(matrix):
     if len(matrix) == 0:
-        return 0
+        return []
     matrix = np.array(matrix)
     res = np.round(matrix.mean(axis=0), 6)
     return res.tolist()
