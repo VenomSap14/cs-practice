@@ -1,5 +1,7 @@
 import numpy as np
 
+#1
+
 hours = np.arange(0, 22, 3)
 line = np.linspace(0, 1, 5)
 zeros = np.zeros(6, dtype=int)
@@ -13,12 +15,16 @@ print("size:", hours.size)
 print("dtype:", hours.dtype)
 print()
 
+#2
+
 print("Третий элемент:", hours)
 print("Последний элемент:", hours[-1])
 print("Элементы с индексами 2-5:", hours[2:6])
 print("Каждый второй элемент:", hours[::2])
 print("Массив в обратном порядке:", hours[::-1])
 print()
+
+#3
 
 temperatures = np.array([
     [12, 14, 13, 15],
@@ -39,6 +45,8 @@ print("Центральный фрагмент 2х2:\n", center_fragment)
 print("Проверка формы фрагмента:", center_fragment.shape)
 print()
 
+#4
+
 matrix = np.arange(1, 26).reshape(5, 5)
 
 f1 = matrix[:3, :]
@@ -57,6 +65,8 @@ f5 = matrix[-2:, -2:]
 print("\nУгловой блок 2х2 в правом нижнем углу:\n", f5, "\nshape:", f5.shape)
 print()
 
+#5
+
 changed_hours = hours.copy()
 changed_hours[2:5] = 99
 changed_hours[::2] = -1
@@ -72,6 +82,8 @@ changed_matrix[1:4, 1:4] = 100
 print("\nchanged_matrix:\n", changed_matrix)
 print("\nисходная matrix:\n", matrix)
 print()
+
+#6
 
 numbers = np.arange(0, 12)
 table = numbers.reshape(3, 4)
