@@ -35,8 +35,8 @@ temperatures = np.array([
 print("Форма (shape):", temperatures.shape)
 print("Число измерений (ndim):", temperatures.ndim)
 print("Число элементов (size):", temperatures.size)
-print("Значение из 2-й строки и 3-го столбца (индексы 1 и 2):", temperatures)
-print("Первая строка:", temperatures)
+print("Значение из 2-й строки и 3-го столбца (индексы 1 и 2):", temperatures[1, 2])
+print("Первая строка:", temperatures[0])
 print("Последний столбец:", temperatures[:, -1])
 print("Первые две строки без первого столбца:\n", temperatures[:2, 1:])
 
